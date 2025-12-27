@@ -91,7 +91,7 @@ Build an automated security operations workflow that handles the complete alert 
 
 Configured Windows Event Log forwarding to Splunk for centralized visibility.
 
-![Splunk Universal Forwarder Installation](screenshots/Win10-splunk forwarder.png)
+![Splunk Universal Forwarder Installation](main/screenshots/01_SplunkForwarder.png)
 *Splunk Universal Forwarder installation on Windows 10*
 
 ![Forwarder Configuration](screenshots/Win10-splunk_forwarder-_config.png)
