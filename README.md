@@ -85,7 +85,7 @@ Build an automated security operations workflow that handles the complete alert 
 
 ## 🔧 Implementation
 
-### Part 1: Infrastructure Setup
+### Part 1: Virtual Machine Setup
 
 #### Log Forwarding Configuration
 
@@ -94,7 +94,7 @@ Configured Windows Event Log forwarding to Splunk for centralized visibility.
 ![Splunk Universal Forwarder Installation](screenshots/01_SplunkForwarder.png)
 *Splunk Universal Forwarder installation on Windows 10*
 
-![Forwarder Configuration](screenshots/Win10-splunk_forwarder-_config.png)
+![Forwarder Configuration](screenshots/02_SplunkForwarderConfig.png)
 *Configuring forwarding to Splunk indexer at 192.168.1.135:9997*
 
 #### Event Log Source Configuration
