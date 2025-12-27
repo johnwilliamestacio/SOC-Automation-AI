@@ -99,7 +99,7 @@ Configured Windows Event Log forwarding to Splunk for centralized visibility.
 
 #### Event Log Source Configuration
 
-![inputs.conf Configuration](screenshots/win10-inputs_conf.png)
+![inputs.conf Configuration](screenshots/03_Win10InputsConfig.png)
 *inputs.conf configured to forward Security, System, PowerShell, and Windows Defender logs to the soc-ai-project index*
 
 ---
@@ -108,7 +108,7 @@ Configured Windows Event Log forwarding to Splunk for centralized visibility.
 
 #### Verifying Log Ingestion
 
-![First Successful Log](screenshots/Splunk-index_soc-ai-project_working.png)
+![First Successful Log](screenshots/04_SplunkIndexConfiguration.png)
 *Successful log ingestion into Splunk - verification of forwarder, network, and index configuration*
 
 ---
@@ -119,7 +119,7 @@ Configured Windows Event Log forwarding to Splunk for centralized visibility.
 
 Implemented SPL query to identify potential brute force authentication attempts.
 
-![Brute Force SPL Query](screenshots/splunk_brute_force_query.png)
+![Brute Force SPL Query](screenshots/05_SPL.png)
 *SPL query detecting failed login attempts (Event ID 4625)*
 
 ```spl
@@ -129,7 +129,7 @@ index="soc-ai-project" EventCode=4625
 
 #### Detection Testing
 
-![Failed Login Test](screenshots/win10_bruteforce_remote.png)
+![Failed Login Test](screenshots/06_Win10TestingDetection.pngg)
 *Testing detection with intentional failed authentication attempts*
 
 Multiple failed login attempts successfully triggered the alert, validating detection logic.
@@ -140,7 +140,7 @@ Multiple failed login attempts successfully triggered the alert, validating dete
 
 #### n8n Setup
 
-![Docker Compose Configuration](screenshots/Screenshot_2025-12-14_193144.png)
+![Docker Compose Configuration](screenshots/07_N8NDeployment.png)
 *docker-compose.yaml configuration for n8n deployment*
 
 **Key Configuration:**
@@ -150,7 +150,7 @@ Multiple failed login attempts successfully triggered the alert, validating dete
 
 #### Challenge 1: Network Accessibility
 
-![Connection Refused](screenshots/n8n_problem_browser_-_need_firewall_config.png)
+![Connection Refused](screenshots/08_N8NFirewallConcern.png)
 *Initial connection attempt blocked by firewall*
 
 **Issue:** Ubuntu firewall (UFW) blocking port 5678
@@ -161,7 +161,7 @@ sudo ufw allow 5678
 sudo ufw enable
 ```
 
-![n8n Successfully Accessible](screenshots/n8n_browser_good.png)
+![n8n Successfully Accessible](09_N8NFirewallConfig.png)
 *n8n web interface accessible after firewall configuration*
 
 ---
@@ -170,7 +170,7 @@ sudo ufw enable
 
 #### Splunk Alert Setup
 
-![Splunk Alert Configuration](screenshots/splunk_save_alert.png)
+![Splunk Alert Configuration](10_WebhookIntegration.png)
 *Real-time alert configuration with webhook integration*
 
 **Configuration:**
@@ -184,14 +184,14 @@ sudo ufw enable
 
 #### Challenge 2: API Parameter Configuration
 
-![OpenAI Parameter Error](screenshots/n8n_message_a_model_problem.png)
+![OpenAI Parameter Error](screenshots/11_OpenAIParameterFormat.png)
 *OpenAI API rejection due to incorrect parameter format*
 
 **Issue:** Invalid message structure for Chat Completions API
 
 **Resolution:** Restructured prompt configuration to match API specifications
 
-![OpenAI Prompt Configuration](screenshots/Screenshot_2025-12-14_212620.png)
+![OpenAI Prompt Configuration](screenshots/12_StructuredAnalysisRequirement.png)
 *Assistant role configuration with structured analysis requirements*
 
 **System Prompt:**
@@ -203,7 +203,7 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 4. Recommend next actions
 ```
 
-![User Prompt Configuration](screenshots/Screenshot_2025-12-14_215545.png)
+![User Prompt Configuration](screenshots/13_FormattedAllertData.png)
 *User message structure providing formatted alert data*
 
 ---
@@ -212,7 +212,7 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 
 #### Complete Automation Pipeline
 
-![n8n Workflow Canvas](screenshots/Screenshot_2025-12-15_052000.png)
+![n8n Workflow Canvas](screenshots/14_WebhookReceivingAlert.png)
 *Complete workflow: Webhook → AI Analysis → Slack Notification*
 
 **Workflow Logic:**
@@ -222,7 +222,7 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 
 #### Webhook Validation
 
-![Webhook Captures Alert](screenshots/n8n_captured_alert.png)
+![Webhook Captures Alert](screenshots/15_WebhookSuccess.png)
 *Webhook successfully receiving alert data from Splunk*
 
 **Captured Data:**
