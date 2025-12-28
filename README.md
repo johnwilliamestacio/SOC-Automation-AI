@@ -161,7 +161,7 @@ sudo ufw allow 5678
 sudo ufw enable
 ```
 
-![n8n Successfully Accessible](09_N8NFirewallConfiguration.png)
+![n8n Successfully Accessible](screenshots/09_N8NFirewallConfiguration.png)
 *n8n web interface accessible after firewall configuration*
 
 ---
@@ -170,7 +170,7 @@ sudo ufw enable
 
 #### Splunk Alert Setup
 
-![Splunk Alert Configuration](10_WebhookIntegration.png)
+![Splunk Alert Configuration](screenshots/10_WebhookIntegration.png)
 *Real-time alert configuration with webhook integration*
 
 **Configuration:**
