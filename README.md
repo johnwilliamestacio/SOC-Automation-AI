@@ -129,7 +129,7 @@ index="soc-ai-project" EventCode=4625
 
 #### Detection Testing
 
-![Failed Login Test](screenshots/06_Win10TestingDetection.pngg)
+![Failed Login Test](screenshots/06_Win10TestingDetection.png)
 *Testing detection with intentional failed authentication attempts*
 
 Multiple failed login attempts successfully triggered the alert, validating detection logic.
@@ -161,7 +161,7 @@ sudo ufw allow 5678
 sudo ufw enable
 ```
 
-![n8n Successfully Accessible](09_N8NFirewallConfig.png)
+![n8n Successfully Accessible](09_N8NFirewallConfiguration.png)
 *n8n web interface accessible after firewall configuration*
 
 ---
