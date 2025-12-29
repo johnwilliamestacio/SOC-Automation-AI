@@ -11,19 +11,18 @@ An end-to-end automated SOC workflow that detects security threats, enriches the
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
 - [Implementation](#implementation)
 - [Results](#results)
-- [Skills Demonstrated](#skills-demonstrated)
 - [Setup Guide](#setup-guide)
 - [Future Enhancements](#future-enhancements)
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 ### Objective
 
@@ -50,7 +49,7 @@ Build an automated security operations workflow that handles the complete alert 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌──────────────────┐
@@ -83,7 +82,7 @@ Build an automated security operations workflow that handles the complete alert 
 
 ---
 
-## 🔧 Implementation
+## Implementation
 
 ### Part 1: Virtual Machine Setup
 
@@ -237,26 +236,26 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 
 #### Challenge 3: Channel Permissions
 
-![Slack Error](screenshots/Screenshot_2025-12-15_052209.png)
+![Slack Error](screenshots/16_SlackAPIError.png)
 *Slack API error: 'not_in_channel'*
 
 **Issue:** Slack bot lacked permissions for #alerts channel
 
 **Resolution:** Added bot to target channel
 
-![Adding Slack App](screenshots/Screenshot_2025-12-15_052322.png)
+![Adding Slack App](screenshots/17_AddingSOCAIAutomation.png)
 *Adding SOC AI Automation Lab app to #alerts channel*
 
-![Slack App Added](screenshots/Screenshot_2025-12-15_052338.png)
+![Slack App Added](screenshots/18_ConfimationApp.png)
 *Confirmation of app addition to channel*
 
 ---
 
-## 📊 Results
+## Results
 
 ### Alert Output
 
-![Slack Alert - Analysis](screenshots/slack_alert_focus.png)
+![Slack Alert - Analysis](screenshots/19_SlackAlert.png)
 *Summary and IOC Enrichment sections*
 
 **Summary:**
@@ -272,7 +271,7 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 - External Threat Intel: Not applicable
 - Assessment: Activity would be internal in nature
 
-![Slack Alert - Recommendations](screenshots/slack_alert_focus_2.png)
+![Slack Alert - Recommendations](screenshots/20_SlackAlert.png)
 *Severity assessment and recommended actions*
 
 **Severity Assessment:**
@@ -302,33 +301,7 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 
 ---
 
-## 🎓 Skills Demonstrated
-
-### Technical Capabilities
-- SIEM administration and log management
-- SPL query development and optimization
-- Security detection engineering
-- API integration and debugging
-- Container orchestration with Docker
-- Prompt engineering for AI systems
-
-### Security Operations
-- Incident detection and alerting
-- Alert triage and prioritization
-- MITRE ATT&CK framework application
-- Threat intelligence integration
-- Security documentation standards
-
-### Problem-Solving
-- Systematic troubleshooting methodology
-- Technical documentation review
-- Network and firewall configuration
-- API debugging and validation
-- Independent research and resolution
-
----
-
-## 🚀 Setup Guide
+## Setup Guide
 
 ### Prerequisites
 
@@ -391,7 +364,7 @@ For detailed setup instructions, see [docs/setup-guide.md](docs/setup-guide.md)
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 **Planned Additions:**
 - [ ] VirusTotal integration for file hash enrichment
@@ -430,17 +403,16 @@ For detailed setup instructions, see [docs/setup-guide.md](docs/setup-guide.md)
 
 ---
 
-## 📄 License
+## License
 
 MIT License - See [LICENSE](LICENSE) file for details
 
 ---
 
-## 📧 Contact
-
-**Portfolio:** [Your Website]  
-**LinkedIn:** [Your LinkedIn]  
-**Email:** [Your Email]
+## Contact
+ 
+**LinkedIn:** https://www.linkedin.com/in/johnwilliamestacio/
+**Email:** johnwilliamestacio@gmail.com
 
 **Questions?** Open an issue or reach out directly.
 
