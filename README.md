@@ -17,7 +17,6 @@ An end-to-end automated SOC workflow that detects security threats, enriches the
 - [Architecture](#architecture)
 - [Implementation](#implementation)
 - [Results](#results)
-- [Setup Guide](#setup-guide)
 - [Future Enhancements](#future-enhancements)
 
 ---
@@ -298,69 +297,6 @@ Act as a Tier 1 SOC analyst assistant. When provided with a security alert:
 | Tools required | 4-5 platforms | 1 (Slack) | **80% reduction** |
 | Analysis consistency | Variable | 100% | **Perfect standardization** |
 | MITRE framework mapping | Manual | Automatic | **Every alert** |
-
----
-
-## Setup Guide
-
-### Prerequisites
-
-**Hardware:**
-- Host machine: 32GB RAM minimum
-- 100GB free disk space
-- Quad-core processor
-
-**Software:**
-- VMware Workstation Pro
-- Windows 10 ISO
-- Ubuntu Server 24.04 ISO
-
-**Accounts:**
-- Splunk account (free trial)
-- OpenAI API key (paid)
-- Slack workspace
-
-### Quick Start
-
-1. **Clone Repository**
-```bash
-git clone https://github.com/yourusername/soc-automation-ai.git
-cd soc-automation-ai
-```
-
-2. **Set Up VMs**
-   - Create Windows 10 VM (4GB RAM)
-   - Create Ubuntu Server for Splunk (8GB RAM)
-   - Create Ubuntu Server for n8n (2GB RAM)
-
-3. **Install Splunk**
-```bash
-wget -O splunk.tgz "https://download.splunk.com/products/splunk/releases/..."
-sudo tar xvzf splunk.tgz -C /opt
-sudo /opt/splunk/bin/splunk start --accept-license
-```
-
-4. **Deploy n8n**
-```bash
-# Copy docker-compose.yaml from repo
-sudo docker-compose up -d
-```
-
-5. **Configure Splunk Forwarder**
-   - Install on Windows 10
-   - Configure inputs.conf (see repo)
-   - Point to Splunk indexer
-
-6. **Import n8n Workflow**
-   - Access n8n at http://your-ip:5678
-   - Import workflow.json from repo
-   - Configure API credentials
-
-7. **Create Splunk Alert**
-   - Use detection-rules.spl from repo
-   - Configure webhook to n8n
-
-For detailed setup instructions, see [docs/setup-guide.md](docs/setup-guide.md)
 
 ---
 
